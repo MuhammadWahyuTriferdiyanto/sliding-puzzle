@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sliding Puzzle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sliding<br><span>Puzzle</span></h1>
+      <p class="subtitle">Susun angka dari kecil ke besar</p>
+    </header>
+
+    <div class="size-selector">
+      <button class="size-btn" data-size="3">3×3</button>
+      <button class="size-btn active" data-size="4">4×4</button>
+      <button class="size-btn" data-size="5">5×5</button>
+    </div>
+
+    <div class="stats">
+      <div class="stat-box">
+        <span class="stat-label">Gerakan</span>
+        <span class="stat-value" id="moves">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Waktu</span>
+        <span class="stat-value" id="timer">0:00</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Terbaik</span>
+        <span class="stat-value" id="best">—</span>
+      </div>
+    </div>
+
+    <div class="board-wrap">
+      <div id="board"></div>
+    </div>
+
+    <div id="win-banner" class="win-banner hidden">
+      🎉 Selesai! Puzzle berhasil diselesaikan!
+    </div>
+
+    <div class="controls">
+      <button id="btn-shuffle" class="btn btn-primary">⟳ Acak Puzzle</button>
+      <button id="btn-reset" class="btn btn-secondary">↺ Reset</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
